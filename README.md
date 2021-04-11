@@ -33,7 +33,7 @@ IMPLEMENTATION APPROACH -----
 		   return size == statsStorePerSecond.size() ? false : true;
 	   }
     
-* There is a async job scheduled which will be trigerred evry millisecond which will check if any transaction is expired. If yes, the entry will be removed, statistics will be aggregated and it will be updated so that the get operation can fetch the data in constant time O(1). 
+* There is a async job scheduled which will be trigerred every millisecond which will check if any transaction is expired. If yes, the entry will be removed, statistics will be aggregated and it will be updated so that the get operation can fetch the data in constant time O(1). 
 * To support the async and parallel processing, there is a bean defined which creates a TaskExecutor, taking the corePoolSize and maxPoolSize from the properties file.
 * For statistics aggregation, Java provides a class java.util.DoubleSummaryStatistics which is a state object for collecting statistics such as count, min, max, sum, and average for the statistics. It was obvious that this class will not work for BigDecimal, so i created another class named BigDecimalSummaryStatistics, which will implement Consumer(I) and will accept the BigDecimal objects and will further recalculate the aggregates and save the state, so that the get operation can be don in constant time.
 * Rest all implementations are as usual simple java implementations. I have tried to provide documentation for many methods and classes.
@@ -41,7 +41,7 @@ IMPLEMENTATION APPROACH -----
 
 
 
-###Requirements -----
+### Requirements -----
  
 
 #### RESTful API for statistics. The main use case for the API is to calculate real time statistics for the last 60 seconds of transactions.
