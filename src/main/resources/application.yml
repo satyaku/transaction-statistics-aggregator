@@ -1,0 +1,21 @@
+#                                  Application Settings                           #
+server:
+  port: 8080
+
+
+#Logging
+logging:
+  level:
+    org:
+      springframework: INFO
+      apache: INFO
+    com:
+      n26: INFO
+      
+
+#Configurable values
+config:
+  timeToExpire: 60000
+  executor:
+    corePoolSize: 10
+    maxPoolSize: 10

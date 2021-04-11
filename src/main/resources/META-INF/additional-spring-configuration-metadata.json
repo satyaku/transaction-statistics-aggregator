@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "config.time-to-expire",
+    "type": "java.lang.String",
+    "description": "A description for 'config.time-to-expire'"
+  },
+  {
+    "name": "config.executor.core-pool-size",
+    "type": "java.lang.String",
+    "description": "A description for 'config.executor.core-pool-size'"
+  },
+  {
+    "name": "config.executor.maxPoolSize",
+    "type": "java.lang.String",
+    "description": "A description for 'config.executor.maxPoolSize'"
+  }
+]}
